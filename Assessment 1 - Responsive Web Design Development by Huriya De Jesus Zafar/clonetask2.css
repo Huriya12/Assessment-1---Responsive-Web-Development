@@ -1,0 +1,250 @@
+/*Import Custom Fonts from Assets Folder*/
+@font-face{
+    font-family: 'Teko'; /*Assign font family name to custom font*/
+    src: url("Clone Task 2 - Assets/Teko-VariableFont_wght.ttf") format("truetype"); /*Load font file*/
+}
+
+@font-face{
+    font-family: 'Lato'; /*Assign font family name to custom font*/
+    src: url("Clone Task 2 - Assets/Lato-Regular.ttf") format("truetype"); /*Load font file*/
+}
+
+/*Responsive Web: For Screen Sizes with 360 pixels and above (Mobile Devices)*/
+
+/*Section I: Styling HTML Semantic Elements*/
+body {
+    background-color: #231651; /*Set body background color*/
+    margin: 0; /*Remove default body margin*/
+    padding: 0; /*Remove default body padding*/
+    overflow-x: hidden; /*Prevent horizontal scrolling*/
+}
+
+header {
+    background-color: #4dcbbd; /*Set header background color*/
+    border: 1.5px solid #070410; /*Set header border thickness and color*/
+    display: flex; /*Make use of flexbox to arrange header contents*/
+    flex-wrap: nowrap; /*Prevent header contents from wrapping*/
+    justify-content: space-between; /*Spread contents evenly with spaces between*/
+    width: 100%; /*Ensure header takes up the full width of the webpage*/
+    padding: 16px; /*Add inner spacing between header contents and header border*/
+    box-sizing: border-box; /*Ensure that the header width and height include the padding and border*/
+}
+
+header h1 {
+    color: #eee36a; /*Set heading1 font color*/
+    text-shadow: -2px -2px 0 #070410, 
+                 2px -2px 0 #070410,
+                 -2px 2px 0 #070410,
+                 2px 2px 0 #070410; /*Add outline around the text*/
+    font-family: 'Teko'; /*Set heading1 font family*/
+    font-size: 2em; /*Set heading1 font size*/
+}
+
+nav{
+    display: none; /*Temporarily hide navigation options for mobile devices*/
+}
+
+main {
+    width: 100%; /*Ensure that the main tag will take up the full width of the webpage*/
+    box-sizing: border-box; /*Ensure that the main width and height include the padding and border*/
+}
+
+/*Section II: Styling HTML Classes*/
+
+button {
+    background-color: #4dcbbd; /*Set button background color*/
+    color: #eee36a; /*Set button font color*/
+    text-shadow: -1.5px -1.5px 0 #070410,
+                 1.5px -1.5px 0 #070410,
+                 -1.5px 1.5px 0 #070410,
+                 1.5px 1.5px 0 #070410; /*Add outline around the text*/
+    font-family: 'Teko'; /*Set button font family*/
+    font-size: 2em; /*Set button font size*/
+    padding: 16px; /*Add inner spacing between the button content and button border*/
+    border: 2px solid #070410; /*Set button border thickness and color*/
+    border-radius: 16px; /*Soften the border corners*/
+    width: 150px; /*Set button width to 150 pixels*/
+}
+
+.container {
+    max-width: 900px; /*Ensure that the container will have a fixed width of 900 pixels*/
+    margin: 0 auto; /*Center the container horizontally*/
+    margin-top: 16px; /*Add outer spacing between the container and header*/
+    display: grid; /*Make use of grid to display main container contents*/
+    grid-template-columns: 1fr; /*Create 1 column*/
+    grid-template-rows: repeat(6, 1fr); /*Create 6 rows with equal height*/
+    gap: 16px; /*Add gap or spacing between grid boxes*/
+    padding-bottom: 16px; /*Add padding at the bottom of each grid*/
+}
+
+.container p {
+    color: #ffffff; /*Set paragraph font color*/
+    text-shadow: -1px -1px 1px #070410,
+                 1px -1px 1px #070410,
+                 -1px 1px 1px #070410,
+                 1px 1px 1px #070410; /*Add outline around the text*/
+    font-family: 'Lato'; /*Set paragraph font family*/
+    font-size: 1.5em; /*Set paragraph font size*/
+    justify-self: start; /*Align paragraph at the start (horizontally)*/
+    align-self: start; /*Align paragraph at the start (vertically)*/
+    margin: 0; /*Remove default margin*/
+    padding: 16px; /*Add inner spacing between the paragraph text and grid box border*/
+}
+
+.container button {
+    font-size: 2em; /*Set button font size*/
+    width: calc(100% - 32px); /*Create a custom button size by subtracting 100% width with 32px (16px on each side (left, right))*/
+    margin: auto 0 16px 0; /*Add outer spacing to the top (to center vertically), and between the bottom of the button and grid box border*/
+    padding: 16px; /*Add inner spacing between the button content and button border*/
+}
+
+.container img {
+    width: 100%; /*Ensure images width takes up the full width of the grid*/
+    height: 500px; /*Limit the images height to 500 pixels*/
+}
+
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6 {
+    background-color: #4dcbbd; /*Set grid box background color*/
+    border: 2px solid black; /*Set grid box border thickness and color*/
+    display: flex; /*Make use of flexbox to arrange grid box contents*/
+    flex-flow: column nowrap; /*Arrange grid boxes in a column or vertically without wrapping*/
+    justify-content: flex-start; /*Align grid box content to the top of the grid box (horizontally)*/
+    align-items: center; /*Align contents within the grid box in the center (vertically)*/
+}
+
+/*Responsive Web: For Screen Sizes with 720 pixels and above (Tablet Devices)*/
+@media(min-width:720px) {
+
+    header {
+        box-shadow: 0 10px 0 #070410; /*Add shadow to the bottom of the header*/
+        align-items: center; /*Align header in the center (vertically)*/
+        gap: 16px; /*Add gap or spacing between header contents*/
+    }
+
+    header h1 {
+        font-size: 3em; /*Increase header h1 font size (from 2em to 3em)*/
+    }
+
+    nav {
+        display: flex; /*Disable navigation invisibility by making use of flexbox to arrange navigation contents*/
+        gap: 32px; /*Add gap or spacing between navigation links*/
+    }
+
+    nav a {
+        color: #231651; /*Set navigation font color*/
+        font-family: 'Lato'; /*Set navigation font family*/
+        font-size: 3em; /*Set navigation font size*/
+        text-decoration: none; /*Remove navigation links default underline and set text decoration to none*/
+    }
+
+    main {
+        padding: 32px; /*Add inner spacing for the main content*/
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr; /*Increase grid column (from 1 to 2)*/
+        grid-template-rows: 1fr 1fr 1fr; /*Decrease grid row (from 6 to 3)*/
+        gap: 32px; /*Increase gap or spacing between grid contents (from 16px to 32px)*/
+    }
+
+    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6 {
+        box-shadow: 10px 10px 0 #070410; /*Add shadow to the right and bottom of each grid box*/
+    }
+}
+
+/*Responsive Web: For Screen Sizes with 1024 pixels and above (Desktop Devices)*/
+@media(min-width:1024px) {
+    nav {
+        gap: 48px; /*Increase gap or spacing between navigation links (from 32px to 48px)*/
+    }
+
+    main {
+        padding: 48px; /*Increase inner spacing for the main content (from 32px to 48px)*/
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr; /*Maintain grid column number (2)*/
+        grid-template-rows: repeat(5, auto); /*Increase grid row number (from 3 to 5)*/
+        gap: 48px; /*Increase gap or spacing between grid contents (from 32px to 48px)*/
+    }
+
+    /*Assignment of Each Grid Box' Location*/
+    .grid1 {
+        grid-column: 1 / 3; /*Grid column placement: both 1st and 2nd column*/
+        grid-row: 1 / 2; /*Grid row placement: 1st row only*/
+    }
+
+    .grid2 {
+        grid-column: 1 / 2; /*Grid column placement: 1st column only*/
+        grid-row: 2 / 3;  /*Grid row placement: 2nd row only*/
+    }
+
+    .grid3 {
+        grid-column: 2 / 3;  /*Grid row placement: 2nd column only*/
+        grid-row: 2 / 3;  /*Grid row placement: 2nd row only*/
+    }
+
+    .grid4 {
+        grid-column: 1 / 3; /*Grid column placement: both 1st and 2nd column*/
+        grid-row: 3 / 4;  /*Grid row placement: 3rd row only*/
+    }
+
+    .grid5 {
+        grid-column: 1 / 3; /*Grid column placement: both 1st and 2nd column*/
+        grid-row: 4 / 5;  /*Grid row placement: 4th row only*/
+    }
+
+    .grid6 {
+        grid-column: 1 / 3; /*Grid column placement: both 1st and 2nd column*/
+        grid-row: 5 / 6;  /*Grid row placement: 5th row only*/
+    }
+
+    /**/
+    .grid1 {
+        display: grid; /*Make use of grid to display grid1 contents*/
+        grid-template-columns: 1fr 1fr; /*Create 2 columns*/
+        grid-template-rows: 1fr auto; /*Create 2 rows*/
+        gap: 0; /*Remove default gap*/
+    }
+
+    .grid1 img {
+        grid-column: 1 / 3; /*grid1 image column placement: both 1st and 2nd column*/
+        grid-row: 1 / 2; /*grid1 image row placement: 1st row only*/
+    }
+
+    .grid1 p {
+        grid-column: 1 / 2; /*grid1 paragraph column placement: 1st column only*/
+        grid-row: 2 / 3; /*grid1 paragraph row placement: 2nd row only*/
+    }
+
+    .grid1 button {
+        grid-column: 2 / 3; /*grid1 button column placement: 2nd column only*/
+        grid-row: 2 / 3; /*grid1 button row placement: 2nd row only*/
+        height: calc(100% - 32px); /*Create a custom button size by subtracting 100% height with 32px (16px on each side (upper, lower)*/
+        justify-self: end; /*Align button to the far right within the grid box*/
+        align-self: end; /*Align button to the bottom edge within the grid box*/
+        margin-right: 16px; /*Add outer spacing on the right between the button and grid box border*/
+    }
+
+    .grid4, .grid5, .grid6 {
+        display: grid; /*Make use of grid to display grid4, grid5, grid6 contents*/
+        grid-template-columns: 1fr 1fr; /*Create 2 columns*/
+        grid-template-rows: auto auto; /*Create 2 rows*/
+    }
+
+    .grid4 img, .grid5 img, .grid6 img {
+        grid-column: 1 / 2; /*grid4, grid5, grid6 image column placement: 1st column only*/
+        grid-row: 1 / 3; /*grid4, grid5, grid6 image row placement: both 1st and 2nd row*/
+    }
+
+    .grid4 p, .grid5 p, .grid6 p {
+        grid-column: 2 / 3; /*grid4, grid5, grid6 paragraph column placement: 2nd column only*/
+        grid-row: 1 / 2; /*grid4, grid5, grid6 paragraph column placement: 1st row only*/
+    }
+
+    .grid4 button, .grid5 button, .grid6 button {
+        grid-column: 2 / 3; /*grid4, grid5, grid6 button column placement: 2nd column only*/
+        grid-row: 2 / 3; /*grid4, grid5, grid6 button column placement: 2nd row only*/
+        justify-self: center; /*Align button in the center (horizontally)*/
+    }
+}
